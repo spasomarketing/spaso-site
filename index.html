@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lead gen consulting for higher ed and mission-driven non-profits. Audit, strategy, execution and reporting from one senior consultant.">
+<title>Spaso Marketing & Media | Higher Ed & Non-Profit Lead Gen Consulting</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #F8F9FC; --navy-700: #E6ECF8;
+    --ink: #0B1220; --slate: #4A5568;
+    --blue: #2F5FBF; --teal: #0F766E;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--ink); font-family: 'Switzer', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .display { font-family: 'Switzer', sans-serif; letter-spacing: -0.02em; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .wrap { max-width: 1152px; margin: 0 auto; padding: 0 24px; }
+
+  header.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(248,249,252,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(11,18,32,0.08); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-family: 'Fraunces', serif; font-weight: 700; font-variation-settings: 'opsz' 90, 'SOFT' 100, 'WONK' 0; font-size: 1.2rem; letter-spacing: -0.005em; }
+  .nav-links { display: none; gap: 32px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--slate); }
+  .nav-links a:hover { color: var(--ink); }
+  .switch-link { font-size: 0.7rem; color: var(--slate); }
+  .switch-link:hover { color: var(--teal); }
+  .btn { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; background: var(--blue); color: #fff; padding: 10px 18px; border-radius: 2px; border: none; cursor: pointer; transition: background 0.15s ease; }
+  .btn:hover { background: #264E9F; }
+  .btn-ghost { font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--slate); padding: 14px 24px; transition: color 0.15s ease; }
+  .btn-ghost:hover { color: var(--ink); }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+
+  .hero { position: relative; overflow: hidden; padding: 160px 0 60px; background: radial-gradient(ellipse at top, var(--navy-700) 0%, var(--navy) 65%); }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--teal); margin-bottom: 24px; }
+  h1.headline { font-weight: 700; font-size: 2.5rem; line-height: 1.1; max-width: 760px; letter-spacing: 0.02em; }
+  .hero p.sub { margin-top: 28px; max-width: 580px; color: var(--slate); font-size: 1.125rem; line-height: 1.65; }
+  .cta-row { margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .cta-row .btn { padding: 14px 26px; font-size: 0.85rem; }
+
+  .stats { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); max-width: 520px; gap: 24px; border-top: 1px solid rgba(11,18,32,0.14); padding-top: 32px; }
+  .stats .num { font-weight: 700; font-size: 1.75rem; }
+  .stats .label { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.13em; color: var(--slate); margin-top: 4px; }
+
+  section.block { padding: 96px 0; border-top: 1px solid rgba(11,18,32,0.07); }
+  .about-grid { display: grid; gap: 48px; }
+  h2.section-title { font-weight: 700; font-size: 2rem; line-height: 1.2; }
+  .about-copy { color: var(--slate); font-size: 1.06rem; line-height: 1.7; }
+  .about-copy p + p { margin-top: 22px; }
+  @media (min-width: 768px) {
+    .about-grid { grid-template-columns: 0.9fr 1.1fr; gap: 80px; }
+    h1.headline { font-size: 3.4rem; }
+    h2.section-title { font-size: 2.25rem; }
+  }
+
+  /* WHO THIS IS FOR */
+  .for-list { display: grid; gap: 16px; margin-top: 32px; }
+  @media (min-width: 640px) { .for-list { grid-template-columns: repeat(2, 1fr); } }
+  .for-item { display: flex; gap: 12px; align-items: flex-start; font-size: 0.98rem; color: var(--ink); }
+  .for-item .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); margin-top: 8px; flex-shrink: 0; }
+
+  /* SERVICES: INVERTED FUNNEL */
+  .services-intro { max-width: 640px; margin-bottom: 40px; }
+  .funnel { max-width: 680px; margin: 0 auto; }
+  .funnel-row { text-align: center; padding: 28px 0; border-top: 1px solid rgba(11,18,32,0.14); }
+  .funnel-row:first-child { border-top: none; }
+  .funnel-bar { height: 4px; border-radius: 2px; background: #14B8A6; margin: 0 auto 20px; }
+  .funnel-bar-1 { width: 70px; opacity: 0.5; }
+  .funnel-bar-2 { width: 160px; opacity: 0.65; }
+  .funnel-bar-3 { width: 280px; opacity: 0.8; }
+  .funnel-bar-4 { width: 420px; max-width: 90%; opacity: 1; }
+  .funnel-result { font-weight: 700; font-size: 1.3rem; max-width: 420px; margin: 0 auto; }
+  .accordion-item summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; gap: 12px; }
+  .accordion-item summary::-webkit-details-marker { display: none; }
+  .accordion-item summary::after { content: '+'; font-family: 'IBM Plex Mono', monospace; color: var(--teal); font-size: 1.2rem; flex-shrink: 0; }
+  .accordion-item[open] summary::after { content: '\2212'; }
+  .accordion-item p { color: var(--slate); font-size: 0.95rem; line-height: 1.6; margin: 16px auto 0; max-width: 520px; text-align: left; }
+
+  .divider { position: relative; }
+  .divider svg { width: 100%; height: 40px; display: block; }
+  .track-line { stroke-dasharray: 4 6; }
+
+  .contact-wrap { max-width: 860px; margin: 0 auto; }
+  .contact-intro { margin-bottom: 48px; }
+  .contact-intro p { margin-top: 20px; color: var(--slate); font-size: 1.125rem; line-height: 1.65; }
+  .contact-split { display: grid; gap: 20px; }
+  @media (min-width: 768px) { .contact-split { grid-template-columns: 1fr 1fr; align-items: start; } }
+  .contact-card { background: #fff; border: 1px solid rgba(11,18,32,0.14); border-radius: 4px; padding: 32px; }
+  .contact-card-primary { border-color: var(--blue); background: rgba(47,95,191,0.07); }
+  .contact-card-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--teal); margin-bottom: 10px; }
+  .contact-card h3 { font-weight: 700; font-size: 1.3rem; margin-bottom: 8px; }
+  .contact-card-copy { color: var(--slate); font-size: 0.95rem; line-height: 1.55; }
+  .contact-card form { margin-top: 20px; gap: 18px; }
+  form { display: flex; flex-direction: column; gap: 24px; }
+  .form-row { display: grid; gap: 24px; }
+  @media (min-width: 768px) { .form-row { grid-template-columns: 1fr 1fr; } }
+  label { display: block; margin-bottom: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--slate); }
+  input, select, textarea { width: 100%; background: #fff; border: 1px solid rgba(11,18,32,0.14); border-radius: 2px; padding: 12px 16px; color: var(--ink); font-family: 'Switzer', sans-serif; font-size: 1rem; }
+  input::placeholder, textarea::placeholder { color: rgba(74,85,104,0.5); }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--blue); }
+  select { appearance: none; -webkit-appearance: none; }
+  textarea { resize: vertical; }
+  .submit-btn { align-self: flex-start; padding: 16px 32px; font-size: 0.85rem; }
+  .form-status { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--teal); display: none; }
+  .form-status.visible { display: block; }
+
+  footer { border-top: 1px solid rgba(11,18,32,0.07); padding: 40px 0; }
+  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .footer-links { display: flex; gap: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--slate); flex-wrap: wrap; justify-content: center; }
+  .footer-links a:hover { color: var(--ink); }
+  @media (min-width: 640px) { .footer-inner { flex-direction: row; justify-content: space-between; } }
+
+
+  /* HYBRID: dark nav, hero and footer on a light body */
+  header.nav, .hero, footer { --navy:#0B1220; --navy-700:#141F3D; --ink:#EDF1F7; --slate:#8B98AC; --blue:#4A7BDB; --teal:#14B8A6; color: var(--ink); }
+  header.nav { background: rgba(11,18,32,0.88); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  footer { background: #0B1220; border-top: none; }
+  header.nav .btn:hover, .hero .btn:hover { background: #6591e0; }
+
+
+  /* Header matches hero exactly; hero ends in a slanted edge; sections alternate white/gray */
+  body { background: #fff; }
+  header.nav { background: #0B1220; border-bottom: none; backdrop-filter: none; }
+  .hero { padding-bottom: 110px; background: radial-gradient(ellipse at 50% 100%, #141F3D 0%, #0B1220 70%); }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 56px; background: #fff; clip-path: polygon(0 0, 0 100%, 100% 100%); }
+  section.block { padding: 80px 0; border-top: none; }
+  .band-white { background: #fff; }
+  .band-gray { background: #F1F4F9; }
+
+  /* One button blue everywhere (header and hero previously used a lighter blue) */
+  .btn, header.nav .btn, .hero .btn { background: #3B6BCB; color: #fff; }
+  .btn:hover, header.nav .btn:hover, .hero .btn:hover { background: #5A86DC; }
+
+  /* Mobile section links (the desktop nav is hidden below 768px) */
+  .nav-mobile { display: flex; justify-content: space-between; gap: 12px; padding: 2px 24px 14px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em; color: #8B98AC; }
+  .nav-mobile a:hover, .nav-mobile a:active { color: #EDF1F7; }
+  @media (min-width: 768px) { .nav-mobile { display: none; } }
+  @media (max-width: 767px) { .hero { padding-top: 196px; } section[id] { scroll-margin-top: 48px; } }
+
+  /* Keep the header on one line on small phones */
+  @media (max-width: 480px) { .logo { font-size: 1.05rem; white-space: nowrap; } header.nav .btn { white-space: nowrap; padding: 9px 12px; font-size: 0.66rem; letter-spacing: 0.1em; } }
+
+  @media (max-width: 560px) { .cta-row { flex-direction: column; align-items: stretch; gap: 8px; } .cta-row .btn { text-align: center; } .btn-ghost { text-align: center; padding: 12px 0; } }
+
+  .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .fade-up { transition: none; opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <span class="logo">Spaso Marketing</span>
+    <nav class="nav-links">
+      <a href="#about">Background</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" id="book-btn-nav" class="btn">Book a consultation</a>
+  </div>
+  <nav class="nav-mobile wrap" aria-label="Page sections">
+    <a href="#about">Background</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Higher Ed &amp; Non-Profit Consulting</p>
+    <h1 class="headline display">Lead gen built to survive board review.</h1>
+    <p class="sub">Rigorous lead gen for higher ed and mission-driven non-profits. Serious about results, fun to work with.</p>
+    <div class="cta-row">
+      <a href="#" id="book-btn-hero" class="btn">Book a consultation</a>
+      <a href="#services" class="btn-ghost">See what's included ↓</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="block band-white">
+  <div class="wrap about-grid">
+    <div class="fade-up">
+      <p class="eyebrow">Background</p>
+      <h2 class="section-title display">Built for a category that can't afford sloppy funnels.</h2>
+    </div>
+    <div class="fade-up about-copy" style="transition-delay:0.1s">
+      <p>Higher education and non-profit lead gen are among the least forgiving arenas in marketing. Decisions rarely come from one audience, the consideration window runs long, and everyone wants cost per acquisition justified line by line. There's nowhere to hide a weak funnel.</p>
+      <p>The mind behind Spaso Marketing has spent a decade building and defending that kind of pipeline, and it shows in habits most agencies skip: rigorous attribution, audience-specific message discipline, and reporting that holds up under budget review, not just a dashboard that looks good in a pitch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block band-gray">
+  <div class="wrap about-grid">
+    <div class="fade-up">
+      <p class="eyebrow">How I work</p>
+      <h2 class="section-title display">You get me. Not a game of telephone.</h2>
+    </div>
+    <div class="fade-up about-copy" style="transition-delay:0.1s">
+      <p>Spaso Marketing is one person, not a large agency. Every call, every draft, every answer comes straight from the person actually doing the work, with no middlemen in between. I live and die by the results, and I'm a lot more fun to work with than a dashboard.</p>
+      <p>If you already have an agency or media partner in place, I can plug in directly as your liaison. I've worked inside agencies and know how they operate, so I know which questions actually need asking, when to push back on work that isn't holding up, and how to build the reporting your cabinet or board needs to see. If what a partner is delivering is accurate and effective, I'll tell you. If it isn't, I'll tell you that too.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block band-white">
+  <div class="wrap">
+    <div class="fade-up">
+      <p class="eyebrow">Who this is for</p>
+      <h2 class="section-title display">Teams responsible for a real enrollment or acquisition number.</h2>
+      <div class="for-list">
+        <div class="for-item"><span class="dot"></span><span>Colleges and universities managing undergraduate or graduate enrollment funnels</span></div>
+        <div class="for-item"><span class="dot"></span><span>Professional and certificate programs competing for a specific applicant pool</span></div>
+        <div class="for-item"><span class="dot"></span><span>Non-profits and mission-driven organizations running acquisition campaigns</span></div>
+        <div class="for-item"><span class="dot"></span><span>Marketing leaders who need outside input to bring to a cabinet or board conversation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="block band-gray">
+  <div class="wrap">
+    <div class="fade-up services-intro">
+      <p class="eyebrow">What's included</p>
+      <h2 class="section-title display">Leads that convert. Measured against cost and revenue.</h2>
+    </div>
+
+    <div class="funnel">
+      <details class="fade-up funnel-row funnel-r4 accordion-item">
+        <div class="funnel-bar funnel-bar-4"></div>
+        <summary>Audit &amp; Strategy</summary>
+        <p>A structured review of your current funnel (where prospects drop off, where spend is wasted) and your brand guide, so everything I recommend and build stays on-brand, followed by a tactical, ROI-modeled growth playbook covering timeline, budget, and audience journey mapping, built to hold up under stakeholder review.</p>
+      </details>
+
+      <details class="fade-up funnel-row funnel-r3 accordion-item">
+        <div class="funnel-bar funnel-bar-3"></div>
+        <summary>Execution</summary>
+        <p>Full-funnel build from inquiry to conversion: the messaging, ad creative, landing pages, email copy, and design, all built to fit your brand guide and any campaigns already running. I can handle it end to end or work with whoever you already have, whichever fits best. Paid search, paid social, and CRM-driven nurture bought against real acquisition cost targets, plus compliance-aware messaging and CRM alignment so nothing dies in the handoff.</p>
+      </details>
+
+      <details class="fade-up funnel-row funnel-r2 accordion-item">
+        <div class="funnel-bar funnel-bar-2"></div>
+        <summary>Reporting &amp; Optimization</summary>
+        <p>Cost per acquisition weighed against real gross and net revenue, attribution by channel, and regular optimization once campaigns are live. Most agencies stop at the numbers. I'll tell you why they moved and what's actually causing them, in reporting built for a room that isn't fluent in marketing metrics.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="block band-white">
+  <div class="wrap contact-wrap">
+    <div class="fade-up contact-intro">
+      <h2 class="section-title display">Ready to talk about your lead gen goals?</h2>
+      <p>Book 15 minutes directly, or leave your info if now isn't the right time and I'll follow up.</p>
+    </div>
+
+    <div class="contact-split">
+      <div class="fade-up contact-card contact-card-primary">
+        <p class="contact-card-label">Ready now</p>
+        <h3>Book a consultation</h3>
+        <p class="contact-card-copy">A direct 15-minute call, no form, just time on the calendar. We'll talk through where your lead gen stands now and where it needs to go.</p>
+        <a href="#" id="book-btn" class="btn" style="margin-top:20px; display:inline-block;">Book a consultation</a>
+      </div>
+
+      <div class="fade-up contact-card">
+        <p class="contact-card-label">Not ready to talk yet</p>
+        <h3>Leave your info</h3>
+        <p class="contact-card-copy">Tell me what you're working on and roughly when you'd like to get started. I'll reply within 24 hours, with no pressure to book.</p>
+        <form id="inquiry-form">
+          <input type="hidden" name="_subject" value="New lead: Higher Ed page">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required placeholder="Jane Smith">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="jane@institution.edu">
+            </div>
+          </div>
+          <div>
+            <label for="org">Organization <span style="text-transform:none; letter-spacing:normal;">(optional)</span></label>
+            <input id="org" name="organization" type="text" placeholder="Institution or organization">
+          </div>
+          <div>
+            <label for="goals">Details <span style="text-transform:none; letter-spacing:normal;">(optional)</span></label>
+            <textarea id="goals" name="goals" rows="3" placeholder="Anything you'd like me to know."></textarea>
+          </div>
+          <button type="submit" class="btn submit-btn">Send</button>
+          <p id="form-status" class="form-status">Sent. I'll follow up shortly.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="logo">Spaso Marketing</span>
+    <div class="footer-links">
+      <a href="mailto:hello@spasomarketing.com">hello@spasomarketing.com</a>
+      <a href="https://www.linkedin.com/in/jeremy-spaso/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- BOOKING LINK CONFIG ----
+  // Replace this with the real scheduling link (Calendly, etc.) once set up.
+  // This is the ONLY line that needs to change. Both "Book a consultation"
+  // buttons (nav is #contact-anchored, hero, and contact card) read from here.
+  var BOOKING_URL = "https://calendar.app.google/fheUqKHa8LBzJxrh6";
+
+  function handleBookClick(e) {
+    if (BOOKING_URL) {
+      window.open(BOOKING_URL, '_blank');
+    } else {
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  var bookBtnHero = document.getElementById('book-btn-hero');
+  var bookBtnCard = document.getElementById('book-btn');
+  if (bookBtnHero) bookBtnHero.addEventListener('click', handleBookClick);
+  if (bookBtnCard) bookBtnCard.addEventListener('click', handleBookClick);
+  var bookBtnNav = document.getElementById('book-btn-nav');
+  if (bookBtnNav) bookBtnNav.addEventListener('click', handleBookClick);
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+
+  // ---- FORM CONFIG ----
+  // Paste the form endpoint URL here (Formspree, Web3Forms, Formsubmit, etc.).
+  var FORM_ENDPOINT = "https://formspree.io/f/mzeeqboj";
+
+  var form = document.getElementById('inquiry-form');
+  var formStatus = document.getElementById('form-status');
+  var sendBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    formStatus.classList.remove('visible');
+    if (!FORM_ENDPOINT) {
+      formStatus.textContent = "Form isn't connected yet. Please email hello@spasomarketing.com.";
+      formStatus.classList.add('visible');
+      return;
+    }
+    sendBtn.disabled = true;
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    }).then(function(r) {
+      if (!r.ok) throw new Error('bad response');
+      window.location.href = 'thanks.html';
+    }).catch(function() {
+      formStatus.textContent = "Something went wrong. Please email hello@spasomarketing.com.";
+      formStatus.classList.add('visible');
+      sendBtn.disabled = false;
+    });
+  });
+</script>
+
+</body>
+</html>
